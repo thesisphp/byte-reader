@@ -1,7 +1,7 @@
-# ByteReader
+# Byte Reader
 
 ## Installation
 
 ```shell
-composer require thesis/bytereader
+composer require thesis/byte-reader
 ```

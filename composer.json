@@ -1,5 +1,5 @@
 {
-    "name": "thesis/bytereader",
+    "name": "thesis/byte-reader",
     "description": "Reader abstraction for I/O.",
     "license": "MIT",
     "type": "library",
