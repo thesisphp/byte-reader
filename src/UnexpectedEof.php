@@ -7,4 +7,4 @@ namespace Thesis\ByteReader;
 /**
  * @api
  */
-final class ReaderIsClosed extends \RuntimeException {}
+final class UnexpectedEof extends \RuntimeException {}
