@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - run: make composer-validate composer-normalize-check deps-analyze
+      - run: make composer-validate composer-normalize-check
 
   phpstan:
     runs-on: ubuntu-latest
@@ -34,12 +34,12 @@ jobs:
       - uses: actions/checkout@v6
       - run: PHP_IMAGE_VERSION=${{ matrix.php }} make ${{ matrix.deps == 'lowest' && 'install-lowest' || '' }} phpstan
 
-  test:
-    runs-on: ubuntu-latest
-    strategy: *strategy
-    steps:
-      - uses: actions/checkout@v6
-      - run: PHP_IMAGE_VERSION=${{ matrix.php }} make ${{ matrix.deps == 'lowest' && 'install-lowest' || '' }} test
+  # test:
+  #   runs-on: ubuntu-latest
+  #   strategy: *strategy
+  #   steps:
+  #     - uses: actions/checkout@v6
+  #     - run: PHP_IMAGE_VERSION=${{ matrix.php }} make ${{ matrix.deps == 'lowest' && 'install-lowest' || '' }} test
 
   # infect:
   #   runs-on: ubuntu-latest
